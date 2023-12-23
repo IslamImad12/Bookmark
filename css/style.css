@@ -1,0 +1,92 @@
+/* General classes*/
+.w-fit {
+    width: fit-content;
+}
+.max-w-500 {
+    max-width: 500px;
+}
+.text-gray {
+    color: gray;
+}
+@media screen and (min-width:992px) {
+    .w-lg-75 {
+        width: 75%;
+    }
+}
+/* */
+.con {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.siteName {
+    display: flex;
+    justify-content: flex-start !important;
+}
+body {
+    background-color: #f7ecde;
+    
+}
+::selection {
+    background-color: #fec260;
+}
+.btn-visit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #9eb23b;
+    --bs-btn-border-color: #9eb23b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8a9e23;
+    --bs-btn-hover-border-color: #6e8018;
+}
+h1 {
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    font-size: 40px;
+    position: relative;
+
+}
+h1 .lay {
+    content: '';
+    background-color: #fec260;
+    width: 100%;
+    height: 18px;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+h1:hover .lay {
+    height: 30px;
+    transition: 350ms;
+}
+h4 {
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.siteName ,
+.bookmarkURL {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: 600!important;
+    font-size: 13px;
+}
+.bookmarkBody {
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+    margin: 30px;
+    padding: 30px;
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+  }
+  .bg-light {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+}
