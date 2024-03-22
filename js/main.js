@@ -43,9 +43,9 @@ for ( var i = 0; i<siteContainer.length ; i++ ){
     <tr class="">
     <td scope="row">${i+1}</td>
     <td>${siteContainer[i].name}</td>
-    <td><button class="btn btn-visit" id='visitButton' onclick ='visit()'>
+    <td><a href='${siteContainer[i].url}' class="btn btn-visit" id='visitButton' >
     <i class='fa-solid fa-eye pe-2'></i>
-    Visite</button></td>
+    Visite</a></td>
     <td><button class="btn btn-danger" onclick="deleteSite(${i})">
     <i class="fa-solid fa-trash"></i>
     Delete</button></td>
@@ -56,21 +56,47 @@ for ( var i = 0; i<siteContainer.length ; i++ ){
 }
 
 
-
-function visit() {
-    for(var i=0;i<siteContainer.length;i++) {
-        open('https://www.'+siteContainer[i].name+'.com');
+function validNum() {
+    var text  = siteName.value;
+    var regwxName = /^[A-Z][a-z]{3,10}$/;
+    if(regwxName.test(text)==true) { //valid
+        siteName.classList.add('is-valid');
+        siteName.classList.remove('is-invalid');
     }
+    else {
+        siteName.classList.add('is-invalid');
+        siteName.classList.remove('is-valid');
+    }
+    console.log(redwxName.test(text))
 }
 
 
-// function visit(x) {
-//     var x = prompt();
-//     console.log(x);
-//    open('https://'+x+'.com');
-// }
+// /*
+// ? Dom (element - even - action) - hover = (mouseenter+mouseleave)
+// ! Events
+// - click
+// - mousedown لما تحط الماوس على العنصر
+// - mouseup لما تشيل الماوس من العنصر
+// - mousemove => moving mouse in element لما تحرك الماوس جوا العنصر
+// - mouseenter => when mouse become in element لما الماوس يلمس العنصر
+// - mouseleave => when mouse leave element تشيل ايدك من الزرار
+// - contextmenue => right click 
 
-// function visit() {
+// - keydown => when click in any button in keyboard تضغط على زرار
+// - keyup => when leave in any letter in keyboard   تشيل ايدك 
+// - keypreess => click in letters only حروف فقط
 
-//     window.open(siteContainer[1].name);
-// }
+// - focus => when focus input 
+// - blue => when stop focus لما تخرج من العنصر
+// - submit => when click submit
+// - drag => when drag image
+
+
+// */
+
+// /*
+// !notes
+// * e.preventDefault(); => to remove default behavior
+// * atts: contenteditable => convert element to input
+// */
+
